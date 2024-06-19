@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const CLIENT_ID = '4cc8c4b889ad43f5b23f901d245d2d73';
-const CLIENT_SECRET = '6f0779508e3d444093a5656042f8f3b7';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+const REDIRECT_URI = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
 const STATE_KEY = 'spotify_auth_state';
+
 
 function generateRandomString(length) {
     let text = '';
